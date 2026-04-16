@@ -20,7 +20,26 @@
     font-family: 'Poppins', sans-serif;
     position: relative;
   }
+/* Copyright footer - always visible */
+.copyright-footer {
+  text-align: center;
+  position: relative;
+  z-index: 15;
+  width: 100%;
+  padding: 12px 0 10px 0;
+  margin-top: 20px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(202,169,109,0.2);
+}
 
+.copyright-footer p {
+  font-size: 9px;
+  color: #caa96d;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.7;
+}
   /* Dark cinematic overlay & grain */
   body::before {
     content: "";
@@ -587,7 +606,8 @@
         <div class="detail-item" style="--i:1;"><i class="fas fa-calendar-alt" style="color:#caa96d; margin-right: 12px;"></i> <strong>Thursday, 23 April 2026</strong></div>
         <div class="detail-item" style="--i:2;"><i class="fas fa-clock" style="color:#caa96d; margin-right: 12px;"></i> Ceremony at 5:00 PM - Sunset Vows</div>
         <div class="detail-item" style="--i:3;"><i class="fas fa-map-marker-alt" style="color:#caa96d; margin-right: 12px;"></i> Etoile Garden · King Mariout</div>
-       
+        <div class="detail-item" style="--i:4;"><i class="fas fa-champagne-glasses" style="color:#caa96d; margin-right: 12px;"></i> Reception & Dinner under the stars</div>
+        <div class="detail-item" style="--i:5;"><i class="fas fa-dress-code" style="color:#caa96d; margin-right: 12px;"></i> Dress code: Black Tie / Formal Attire</div>
       </div>
       
       <!-- COUNTDOWN -->
@@ -836,10 +856,12 @@
   // Make sure envelope is clickable even on small touch devices.
   console.log("Responsive Save The Date ready — with auto-loop music on envelope open.");
 </script>
-<!-- Add this copyright line just before the closing </body> tag, after the footer-music div -->
-
-<div style="text-align: center; margin-top: 8px; padding: 4px 0; opacity: 0.6;">
-  <p style="font-size: 13px; color: white; letter-spacing: 0.5px; font-family: 'Poppins', sans-serif;">© 2026 Ziad Samir Mohamed. All Rights Reserved.</p>
-</div>
+<!-- Replace the copyright div at the bottom with this fixed version -->
+  </div> <!-- close main-content -->
+  <div class="copyright-footer">
+    <p>© 2026 Ziad Samir Mohamed. All Rights Reserved.</p>
+  </div>
+</body>
+</html>
 </body>
 </html>
